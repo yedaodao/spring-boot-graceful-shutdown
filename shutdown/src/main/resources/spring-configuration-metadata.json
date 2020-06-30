@@ -1,0 +1,16 @@
+{
+  "hints": [],
+  "groups": [],
+  "properties": [
+    {
+      "name": "shutdown.waiting-seconds",
+      "description": "Wait seconds for ensuring the instance is marked offline",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "shutdown.timeout-seconds",
+      "description": "Wait seconds for tasks in thread pool",
+      "type": "java.lang.Integer"
+    }
+  ]
+}

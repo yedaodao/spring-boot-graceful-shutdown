@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.lianjia.infrastructure.graceful.configuration.TomcatGracefulShutdownConfiguration,\
+com.lianjia.infrastructure.graceful.configuration.EurekaGracefulShutdownConfiguration

@@ -1,0 +1,19 @@
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.SR5'
+    }
+}
+
+dependencies {
+    compile project(':shutdown')
+    compileOnly 'org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE'
+    compileOnly 'org.springframework.cloud:spring-cloud-netflix-eureka-client'
+    compileOnly 'com.netflix.eureka:eureka-client:1.9.12'
+    compileOnly 'com.netflix.eureka:eureka-core:1.9.12'
+    compileOnly 'com.thoughtworks.xstream:xstream:1.4.11.1'
+}

@@ -1,0 +1,17 @@
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR2'
+    }
+}
+
+dependencies {
+    compile project(':shutdown')
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.1.2.RELEASE'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE'
+    compileOnly 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+}

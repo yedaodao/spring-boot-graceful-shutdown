@@ -1,0 +1,57 @@
+allprojects {
+    group 'com.github.yedaodao.infrastructure'
+    version "${version != 'unspecified' ? version : '1.0.0-SNAPSHOT'}"
+    description 'Smoothly shut down Spring Boot projects'
+
+    buildscript {
+        repositories {
+            mavenLocal()
+            mavenCentral()
+            jcenter()
+        }
+
+        dependencies {
+            classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: "jacoco"
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'maven-publish'
+
+    dependencies {
+
+    }
+
+    javadoc {
+        options.encoding = 'UTF-8'
+        options.addStringOption("charset", "UTF-8")
+    }
+
+    task sourceJar(type: Jar) {
+        from sourceSets.main.allJava
+    }
+
+    archivesBaseName = rootProject.name + '-' + project.name
+
+    publishing {
+        publications {
+            starter(MavenPublication) {
+                from components.java
+                artifact sourceJar {
+                    classifier "sources"
+                }
+            }
+        }
+    }
+}

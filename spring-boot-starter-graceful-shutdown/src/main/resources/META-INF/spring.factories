@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.yedaodao.infrastructure.shutdown.configuration.TomcatGracefulShutdownConfiguration,\
+com.github.yedaodao.infrastructure.shutdown.configuration.EurekaGracefulShutdownConfiguration
