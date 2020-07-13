@@ -16,7 +16,7 @@ Maven
 
 ```xml
 <dependency>
-  <groupId>com.lianjia.infrastructure</groupId>
+  <groupId>com.github.yedaodao.infrastructure</groupId>
   <artifactId>spring-boot-starter-graceful-shutdown-legacy</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 </dependency>
@@ -34,7 +34,7 @@ Maven
 
 ```xml
 <dependency>
-  <groupId>com.lianjia.infrastructure</groupId>
+  <groupId>com.github.yedaodao.infrastructure</groupId>
   <artifactId>spring-boot-starter-graceful-shutdown</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 </dependency>
